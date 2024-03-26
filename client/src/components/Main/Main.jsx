@@ -10,7 +10,7 @@ const Main = () => {
                             <span>Ofertas → <a href="#">Novo Série 1</a></span>
                             <a href="#">Voltar para página anterior</a>
                         </div>
-                        <div className="title-page-car">
+                        <div className="title-page-car show">
                             <h1>BMW Série 4 Cabrio</h1>
                         </div>
                     </div>
