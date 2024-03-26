@@ -1,11 +1,12 @@
-import { useState } from "react";
 import "./Chat.css";
+import { useState } from "react";
 import axios from "axios";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 const Chat = () => {
     const [popUp, setPopup] = useState(false);
     const [prompt, setPrompt] = useState("")
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useLocalStorage("messages", []);
 
     const handleModal = () => {
         setPopup(!popUp);
