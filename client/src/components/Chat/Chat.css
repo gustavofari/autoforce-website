@@ -23,6 +23,45 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px;
 }
 
+
+.button-open {
+    opacity: 0;
+    animation: buttonOpen 0.3s ease-in-out forwards;
+}
+
+@keyframes buttonOpen {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+        /* Opacidade 0% no início da animação */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
+.button-close {
+    opacity: 0;
+    animation: buttonClose 0.3s ease-in-out forwards;
+}
+
+@keyframes buttonClose {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+        /* Opacidade 0% no início da animação */
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+
+    }
+}
+
 dialog {
     position: fixed;
     bottom: 100px;

@@ -45,7 +45,13 @@ const Chat = () => {
 
     return (
         <>
-            <button className="popup-button" onClick={handleModal}><img src={popUp ? "images/close-icon.png" : "images/popup-logo.png"} alt="" /></button>
+            <button className="popup-button" onClick={handleModal}>
+                <img
+                    src={popUp ? "images/close-icon.png" : "images/popup-logo.png"}
+                    alt=""
+                    className={popUp ? "button-close" : "button-open"}
+                />
+            </button>
             <dialog open={popUp}>
                 <div className="header-chat">
                     <div className="image-user">
