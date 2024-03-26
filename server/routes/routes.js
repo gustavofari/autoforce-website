@@ -4,10 +4,12 @@ const {OpenAI} = require("openai");
 
 dotenv.config();
 
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
+
 const router = express.Router();
 
 const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: OPENAI_API_KEY,
 });
   
 router.post("/chat", async(req, res) => {
