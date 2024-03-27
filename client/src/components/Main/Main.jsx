@@ -1,6 +1,29 @@
 import "./Main.css";
+import { useState, useEffect, useRef } from 'react';
 
 const Main = () => {
+    const [elementVisible, setElementVisible] = useState(false);
+    const textRef = useRef();
+    const previousScrollY = useRef(0);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            const currentScrollY = window.scrollY;
+
+            if (currentScrollY > previousScrollY.current) {
+                setElementVisible(entry.isIntersecting);
+            }
+            previousScrollY.current = currentScrollY;
+        })
+
+        observer.observe(textRef.current);
+
+        return () => {
+            observer.disconnect();
+        };
+    }, []);
+
     return (
         <>
             <main>
@@ -51,7 +74,7 @@ const Main = () => {
                     </div>
                 </section>
                 <section>
-                    <div className="description">
+                    <div className={elementVisible ? "description text-animation" : "description"} ref={textRef}>
                         <h1>A vida é melhor<br />
                             quando compartilhada.<br />
                             BMW Série 4 Cabrio
