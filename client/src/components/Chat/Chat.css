@@ -23,7 +23,6 @@
     box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 16px;
 }
 
-
 .button-open {
     opacity: 0;
     animation: buttonOpen 0.3s ease-in-out forwards;
@@ -32,8 +31,7 @@
 @keyframes buttonOpen {
     from {
         opacity: 0;
-        transform: translateX(50px);
-        /* Opacidade 0% no início da animação */
+        transform: translateX(20px);
     }
 
     to {
@@ -51,8 +49,7 @@
 @keyframes buttonClose {
     from {
         opacity: 0;
-        transform: translateX(-50px);
-        /* Opacidade 0% no início da animação */
+        transform: translateX(-20px);
     }
 
     to {
