@@ -66,7 +66,10 @@ const Chat = () => {
                     <ul>
                         {messages.map((message, index) => (
                             <li className={`${message.role}-messages`} key={index}>
-                                <span>{message.role === "user" ? "Você" : "AutoForce"}</span>
+                                {message.role === "bot" ? 
+                                    <span>AutoForce</span>
+                               : null }
+                               
                                 <p>{message.content}</p>
                             </li>
                         ))}
