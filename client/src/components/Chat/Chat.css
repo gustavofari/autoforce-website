@@ -106,7 +106,7 @@ dialog {
 }
 
 .messages-chat {
-    padding: 0 10px;
+    padding: 10px 10px;
 }
 
 .user-messages {
@@ -122,6 +122,8 @@ dialog {
 }
 
 .user-messages p {
+    word-wrap: break-word;
+    max-width: 90%;
     font-size: 14px;
     text-align: start;
     background-color: var(--color-blue-primary);
