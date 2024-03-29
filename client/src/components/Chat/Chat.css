@@ -156,10 +156,10 @@ dialog {
     color: #425b76;
 }
 
-.bot-messages span,
-.user-messages span {
+.bot-messages span {
     font-size: 12px;
     font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
     color: #425b76
 }
 

@@ -2,11 +2,13 @@ import "./Chat.css";
 import { useState } from "react";
 import axios from "axios";
 import useLocalStorage from "../../hooks/useLocalStorage";
+import useScrollToBottom from "../../hooks/useScrollToEnd";
 
 const Chat = () => {
     const [popUp, setPopup] = useState(false);
     const [prompt, setPrompt] = useState("")
     const [messages, setMessages] = useLocalStorage("messages", []);
+    const scrollToEnd = useScrollToBottom([messages])
 
     const handleModal = () => {
         setPopup(!popUp);
@@ -41,6 +43,8 @@ const Chat = () => {
 
         } catch (err) {
             console.log(err)
+        } finally {
+            console.log("foi")
         }
     }
 
@@ -66,13 +70,14 @@ const Chat = () => {
                     <ul>
                         {messages.map((message, index) => (
                             <li className={`${message.role}-messages`} key={index}>
-                                {message.role === "bot" ? 
+                                {message.role === "bot" ?
                                     <span>AutoForce</span>
-                               : null }
-                               
+                                    : null}
+
                                 <p>{message.content}</p>
                             </li>
                         ))}
+                        <div ref={scrollToEnd} />
                     </ul>
                 </div>
                 <div className="send-message">

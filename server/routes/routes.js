@@ -11,7 +11,7 @@ const router = express.Router();
 const openai = new OpenAI({
     apiKey: OPENAI_API_KEY,
 });
-  
+   
 router.post("/chat", async(req, res) => {
 
     const {prompt} = req.body;
@@ -20,11 +20,11 @@ router.post("/chat", async(req, res) => {
         const response = await openai.chat.completions.create({
             model: "gpt-3.5-turbo",
             messages: [
-            {
-                "role": "assistant",
-                "content": prompt
-            }
-            ],
+                {
+                    "role": "assistant",
+                    "content": prompt
+                }
+                ],
             temperature: 1,
             max_tokens: 256,
             top_p: 1,
