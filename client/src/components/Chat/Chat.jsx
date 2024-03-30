@@ -7,6 +7,7 @@ import useScrollToBottom from "../../hooks/useScrollToEnd";
 const Chat = () => {
   const [popUp, setPopup] = useState(false);
   const [prompt, setPrompt] = useState("");
+  const [loading, setLoading] = useState(false);
   const [messages, setMessages] = useLocalStorage("messages", []);
   const scrollToEnd = useScrollToBottom(messages);
 
@@ -16,6 +17,7 @@ const Chat = () => {
 
   const getMessages = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const userMessage = {
       role: "user",
@@ -40,7 +42,7 @@ const Chat = () => {
     } catch (err) {
       console.log(err);
     } finally {
-      console.log(messages);
+      setLoading(false);
     }
   };
 
@@ -75,6 +77,16 @@ const Chat = () => {
                 <p>{message.content}</p>
               </li>
             ))}
+            {loading ? (
+              <li className="bot-messages">
+                <span>AutoForce</span>
+                <p className="jumping-dots">
+                  <span className="dot-1"></span>
+                  <span className="dot-2"></span>
+                  <span className="dot-3"></span>
+                </p>
+              </li>
+            ) : null}
           </ul>
         </div>
         <div className="send-message">
