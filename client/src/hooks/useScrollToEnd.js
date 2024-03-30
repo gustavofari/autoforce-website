@@ -1,18 +1,17 @@
 import { useRef, useEffect } from "react";
 
-function useScrollToEnd (refDependencies) {
-    const ref = useRef(null);
+function useScrollToEnd(refDependencies) {
+  const ref = useRef(null);
 
+  const scrollToBottom = () => {
+    ref.current?.scrollIntoView({ behavior: "smooth" });
+  };
 
-    const scrollToBottom = () => {
-        ref.current?.scrollIntoView({ behavior: "smooth" });
-    };
+  useEffect(() => {
+    scrollToBottom();
+  }, [refDependencies]);
 
-    useEffect(() => {
-        scrollToBottom(); 
-    }, [refDependencies]); 
-
-    return ref;
+  return ref;
 }
 
-export default useScrollToEnd ;
+export default useScrollToEnd;
