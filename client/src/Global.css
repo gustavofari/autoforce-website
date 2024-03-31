@@ -7,6 +7,7 @@
     --color-secondary: #fff;
 
     --color-black: #000;
+    --color-gray-light: #e9e9e9;
 
     --color-green-primary: #4EC859;
     --color-green-secondary: #286b2d;
@@ -43,6 +44,16 @@
 body {
     background-color: var(--color-primary);
     font-family: var(--ff-primary);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--color-gray-light);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-gray);
+    border-radius: 5px;
 }
 
 nav,

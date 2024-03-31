@@ -109,6 +109,17 @@ dialog {
     padding: 10px 10px;
 }
 
+.messages-chat::-webkit-scrollbar {
+    width: 12px;
+    background-color: var(--color-gray-light);
+}
+
+.messages-chat::-webkit-scrollbar-thumb {
+    background-color: var(--color-text-gray);
+    border-radius: 5px;
+}
+
+
 .user-messages {
     margin: 5px 0 0 40px;
     display: flex;
@@ -277,5 +288,15 @@ dialog {
     .username {
         padding-left: 10px;
         font-size: 1rem;
+    }
+
+
+    .send-message input {
+        font-size: 1.1rem;
+    }
+
+
+    .send-message img {
+        width: 30px;
     }
 }
