@@ -8,11 +8,14 @@ const PORT = process.env.PORT || 3030;
 dotenv.config();
 
 const app = express();
-app.use(cors());
+
+const corsOptions = {
+  origin: "*", 
+};
+
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
-
-
 app.use("/", routes);
-
 
 app.listen(PORT, () => console.log(`Console running in port: ${PORT}`))
