@@ -29,7 +29,7 @@ const Chat = () => {
     setPrompt("");
 
     try {
-      const response = await axios.post("http://localhost:3000/chat", {
+      const response = await axios.post("https://autoforce-website.onrender.com/chat", {
         prompt: prompt,
       });
       setMessages((prevState) => [
