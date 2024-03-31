@@ -175,42 +175,46 @@ dialog {
     position: relative;
     animation: jump 1s infinite;
     display: inline-block;
-  }
-  
-  .jumping-dots .dot-1, .jumping-dots .dot-2, .jumping-dots .dot-3 {
+}
+
+.jumping-dots .dot-1,
+.jumping-dots .dot-2,
+.jumping-dots .dot-3 {
     width: 7px;
     height: 7px;
     background-color: #b5b5b5;
     border-radius: 50%;
     margin-right: 3px;
-  }
+}
 
-  .jumping-dots .dot-1 {
+.jumping-dots .dot-1 {
     animation-delay: 200ms;
-  }
+}
 
-  .jumping-dots .dot-2 {
+.jumping-dots .dot-2 {
     animation-delay: 400ms;
-  }
+}
 
-  .jumping-dots .dot-3 {
+.jumping-dots .dot-3 {
     animation-delay: 600ms;
-  }
-  
- 
-  @keyframes jump {
+}
+
+
+@keyframes jump {
     0% {
-      bottom: 0px;
+        bottom: 0px;
     }
+
     20% {
-      bottom: 5px;
-      background-color: var(--color-blue-primary); 
+        bottom: 5px;
+        background-color: var(--color-blue-primary);
     }
-    40% {    
-      bottom: 0px;
-      background-color: #b5b5b5;
+
+    40% {
+        bottom: 0px;
+        background-color: #b5b5b5;
     }
-  }
+}
 
 .send-message {
     height: 15%;
@@ -242,7 +246,7 @@ dialog {
 
 .send-message img {
     width: 25px;
-} 
+}
 
 @media screen and (max-width: 600px) {
     .popup-button {
@@ -256,5 +260,22 @@ dialog {
         left: 50%;
         right: 50%;
         transform: translate(-50%, -0%);
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    dialog {
+        width: 400px;
+        height: 570px;
+    }
+
+    .image-user img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .username {
+        padding-left: 10px;
+        font-size: 1rem;
     }
 }

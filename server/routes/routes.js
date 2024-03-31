@@ -1,7 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const { OpenAI } = require("openai");
-const promptSystem = require("../prompt/promptSystem");
+const {promptSystem} = require("../prompt/promptSystem");
 
 dotenv.config();
 
