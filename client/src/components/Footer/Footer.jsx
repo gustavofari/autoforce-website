@@ -1,11 +1,12 @@
 import "./Footer.css"
+import PropTypes from 'prop-types';
 
-const Footer = () => {
+const Footer = ({ scrollToView }) => {
     return (
         <>
             <footer>
                 <section className="container">
-                    <a href="#menu"><img src="images/arrow-top-icon.png" alt="Voltar ao ínicio" /></a>
+                    <a onClick={scrollToView}><img src="images/arrow-top-icon.png" alt="Voltar ao ínicio" /></a>
                     <div className="nav-links">
                         <img src="images/dealer-white-logo.png" />
                         <div className="social-media-itens">
@@ -44,5 +45,9 @@ const Footer = () => {
         </>
     )
 }
+
+Footer.propTypes = {
+    scrollToView: PropTypes.func.isRequired
+};
 
 export default Footer

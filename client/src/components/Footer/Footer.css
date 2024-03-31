@@ -14,6 +14,10 @@ section.container {
     position: relative;
 }
 
+section.container a {
+    cursor: pointer;
+}
+
 .nav-links {
     display: flex;
     justify-content: space-between;

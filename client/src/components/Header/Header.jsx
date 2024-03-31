@@ -1,9 +1,12 @@
 import "./Header.css";
-const Header = () => {
+import PropTypes from 'prop-types';
+
+const Header = ({ menuRef }) => {
+    console.log(menuRef)
     return (
         <>
             <header className="primary-header">
-                <nav id="menu">
+                <nav ref={menuRef}>
                     <div className="icons-logo">
                         <img src="images/dealer-black-logo.png" alt="Logo Dealer" />
                         <img src="images/line-black.png" className="line" />
@@ -30,5 +33,9 @@ const Header = () => {
         </>
     )
 }
+
+Header.propTypes = {
+    menuRef: PropTypes.object.isRequired
+};
 
 export default Header
