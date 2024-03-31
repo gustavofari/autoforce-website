@@ -2,7 +2,6 @@ import "./Header.css";
 import PropTypes from 'prop-types';
 
 const Header = ({ menuRef }) => {
-    console.log(menuRef)
     return (
         <>
             <header className="primary-header">
