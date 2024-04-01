@@ -29,13 +29,14 @@ const Chat = () => {
     setPrompt("");
 
     try {
-      const response = await axios.post("https://autoforce-website.onrender.com/chat", {
-        prompt: prompt,
+      await console.log("mensagens: ", messages)
+      const response = await axios.post("http://localhost:3000/chat", {
+        prompt: [...messages, userMessage],
       });
       setMessages((prevState) => [
         ...prevState,
         {
-          role: "bot",
+          role: "assistant",
           content: response.data,
         },
       ]);
@@ -72,13 +73,13 @@ const Chat = () => {
                 className={`${message.role}-messages`}
                 key={index}
               >
-                {message.role === "bot" ? <span>AutoForce</span> : null}
+                {message.role === "assistant" ? <span>AutoForce</span> : null}
 
                 <p>{message.content}</p>
               </li>
             ))}
             {loading ? (
-              <li className="bot-messages">
+              <li className="assistant-messages">
                 <span>AutoForce</span>
                 <p className="jumping-dots">
                   <span className="dot-1"></span>

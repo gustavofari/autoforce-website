@@ -24,10 +24,7 @@ router.post("/chat", async (req, res) => {
           role: "system",
           content: promptSystem,
         },
-        {
-          role: "assistant",
-          content: prompt,
-        },
+        ...prompt
       ],
       temperature: 1,
       max_tokens: 256,

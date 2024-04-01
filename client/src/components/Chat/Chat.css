@@ -145,17 +145,17 @@ dialog {
 }
 
 
-.bot-messages {
+.assistant-messages {
     text-align: start;
     margin: 10px 40px 10px 0px;
     list-style: none;
 }
 
-.bot-messages span {
+.assistant-messages span {
     color: #000;
 }
 
-.bot-messages p {
+.assistant-messages p {
     background-color: #cbd6e2;
     font-size: 14px;
     padding: 8px 16px;
@@ -166,7 +166,7 @@ dialog {
     color: #425b76;
 }
 
-.bot-messages span {
+.assistant-messages span {
     font-size: 12px;
     font-weight: bold;
     font-family: Helvetica, Arial, sans-serif;
@@ -174,7 +174,7 @@ dialog {
 }
 
 
-.bot-messages .jumping-dots {
+.assistant-messages .jumping-dots {
     display: flex;
     padding: 15px 16px;
     width: 30%;
