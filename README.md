@@ -46,3 +46,6 @@ O projeto é baseado no desafio proposto pela autoforce para uma vaga de front-e
 - Rode `npm start` para rodar client
 - Rode `npm run dev` para rodar server
 - Pronto 🎉
+
+# DEPLOY 
+Pode verificar o projeto funcionando pelo deploy feito no render [Auto Force Website](https://autoforce-frontend-react.onrender.com/)
