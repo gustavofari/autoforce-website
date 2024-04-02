@@ -27,7 +27,7 @@ Me inspirei no próprio site da autoforce para fazer o chatbot com algumas peque
 
 - [MIT](./LICENSE)
 
-- ## Requisitos para rodar o projeto
+## Requisitos para rodar o projeto
 
 ### Setup de ambiente:
 
