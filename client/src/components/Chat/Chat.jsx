@@ -30,7 +30,7 @@ const Chat = () => {
 
     try {
       await console.log("mensagens: ", messages)
-      const response = await axios.post("http://localhost:3000/chat", {
+      const response = await axios.post("https://autoforce-website.onrender.com/chat", {
         prompt: [...messages, userMessage],
       });
       setMessages((prevState) => [
