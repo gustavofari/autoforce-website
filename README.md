@@ -17,6 +17,9 @@ Me inspirei no próprio site da autoforce para fazer o chatbot com algumas peque
 <p align="center">
  <a href="https://ibb.co/mD1G5Px"><img src="https://i.ibb.co/Bzdt2Y1/Captura-de-tela-2024-04-02-093850.png" alt="Captura-de-tela-2024-04-02-093850" border="0"></a>
 </p>
+<p>
+O projeto é baseado no desafio proposto pela autoforce para uma vaga de front-end, com a adoção de React para ser mais dinâmico, além do Node para a implementação de um chat de mensagens integrado com uma inteligência artificial através da API do OPENAI.
+</p>
 
 
 ### Próximos Passos?
